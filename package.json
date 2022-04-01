@@ -1,19 +1,19 @@
 {
-  "name": "@amalgama/react-native-animated-icon-button",
+  "name": "@amalgama/react-native-animated-toggle-button",
   "version": "0.1.0",
   "description": "A two states button that can be animated when transitioning between them.",
-  "main": "lib/commonjs/AnimatedIconButton",
-  "module": "lib/module/AnimatedIconButton",
-  "types": "lib/typescript/AnimatedIconButton.d.ts",
-  "react-native": "src/AnimatedIconButton",
-  "source": "src/AnimatedIconButton",
+  "main": "lib/commonjs/AnimatedToggleButton",
+  "module": "lib/module/AnimatedToggleButton",
+  "types": "lib/typescript/AnimatedToggleButton.d.ts",
+  "react-native": "src/AnimatedToggleButton",
+  "source": "src/AnimatedToggleButton",
   "files": [
     "src",
     "lib",
     "android",
     "ios",
     "cpp",
-    "react-native-animated-icon-button.podspec",
+    "react-native-animated-toggle-button.podspec",
     "!lib/typescript/example",
     "!android/build",
     "!ios/build",
@@ -38,14 +38,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@git.amalgama.co:amalgama/packages/npm/react-native-animated-icon-button.git"
+    "url": "git@git.amalgama.co:amalgama/packages/npm/react-native-animated-toggle-button.git"
   },
   "author": "Mauro E. Bender <mauro@amalgama.co> (https://git.amalgama.co/mauro)",
   "license": "MIT",
   "bugs": {
-    "url": "https://git.amalgama.co/amalgama/packages/npm/react-native-animated-icon-button/issues"
+    "url": "https://git.amalgama.co/amalgama/packages/npm/react-native-animated-toggle-button/issues"
   },
-  "homepage": "https://git.amalgama.co/amalgama/packages/npm/react-native-animated-icon-button#readme",
+  "homepage": "https://git.amalgama.co/amalgama/packages/npm/react-native-animated-toggle-button#readme",
   "publishConfig": {
     "@amalgama:registry": " https://git.amalgama.co/api/v4/projects/982/packages/npm/"
   },

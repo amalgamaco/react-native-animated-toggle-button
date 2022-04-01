@@ -1,6 +1,6 @@
 {
-  "name": "react-native-animated-icon-button-example",
-  "description": "Example app for react-native-animated-icon-button",
+  "name": "react-native-animated-toggle-button-example",
+  "description": "Example app for react-native-animated-toggle-button",
   "version": "0.0.1",
   "private": true,
   "scripts": {

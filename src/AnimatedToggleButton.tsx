@@ -21,7 +21,7 @@ export interface AnimatedIconButtonProps {
 	style?: StyleProp<ViewStyle>
 }
 
-const AnimatedIconButton = ( {
+const AnimatedToggleButton = ( {
 	source,
 	isActive,
 	onPress,
@@ -32,7 +32,7 @@ const AnimatedIconButton = ( {
 	speed = 1,
 	size = 50,
 	style,
-	testID = 'AnimatedIconButton',
+	testID = 'AnimatedToggleButton',
 	containerStyle
 }: AnimatedIconButtonProps ) => {
 	const animationRef = useRef( null );
@@ -76,4 +76,4 @@ const AnimatedIconButton = ( {
 	);
 };
 
-export default AnimatedIconButton;
+export default AnimatedToggleButton;

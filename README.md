@@ -1,17 +1,17 @@
-# react-native-animated-icon-button
+# react-native-animated-toggle-button
 
 A two states button that can be animated when trasitioning between them.
 
 ## Installation
 
 ```sh
-npm install react-native-animated-icon-button
+npm install react-native-animated-toggle-button
 ```
 
 ## Usage
 
 ```js
-import { multiply } from "react-native-animated-icon-button";
+import { multiply } from "react-native-animated-toggle-button";
 
 // ...
 

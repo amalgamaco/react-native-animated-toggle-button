@@ -1,7 +1,7 @@
 import React from 'react';
 import { render } from '@testing-library/react-native';
 
-import AnimatedIconButton from '../src/AnimatedIconButton';
+import AnimatedToggleButton from '../src/AnimatedToggleButton';
 
 const mockPlay = jest.fn();
 
@@ -36,7 +36,7 @@ const animationSource = {
 	layers: []
 };
 
-describe( 'AnimatedIconButton', () => {
+describe( 'AnimatedToggleButton', () => {
 	beforeEach( () => { mockPlay.mockClear(); } );
 
 	const activeFrame = 10;
@@ -45,7 +45,7 @@ describe( 'AnimatedIconButton', () => {
 	const toActiveFrameRange = [ 2, 9 ];
 
 	const renderComponent = ( { isActive = false } = {} ) => render(
-		<AnimatedIconButton
+		<AnimatedToggleButton
 			source={animationSource}
 			isActive={isActive}
 			activeFrame={activeFrame}
@@ -56,7 +56,7 @@ describe( 'AnimatedIconButton', () => {
 		/>
 	);
 	const rerenderComponent = ( { rerender, isActive = false } = {} ) => rerender(
-		<AnimatedIconButton
+		<AnimatedToggleButton
 			source={animationSource}
 			isActive={isActive}
 			activeFrame={activeFrame}
