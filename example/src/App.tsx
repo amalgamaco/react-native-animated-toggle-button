@@ -3,7 +3,7 @@ import * as React from 'react';
 import { StyleSheet, View } from 'react-native';
 
 // eslint-disable-next-line import/no-extraneous-dependencies
-import AnimatedIconButton, { AnimatedIconButtonProps } from '@amalgama/react-native-animated-icon-button';
+import AnimatedToggleButton, { AnimatedIconButtonProps } from '@amalgama/react-native-animated-toggle-button';
 
 import likeAnimation1 from './assets/heart-like-animation.json';
 import likeAnimation2 from './assets/thumbs-up-animation.json';
@@ -45,7 +45,7 @@ const ControlledAnimatedButton = ( {
 	const [ isActive, setIsActive ] = React.useState( false );
 
 	return (
-		<AnimatedIconButton
+		<AnimatedToggleButton
 			source={source}
 			isActive={isActive}
 			onPress={() => setIsActive( !isActive )}
