@@ -8,8 +8,8 @@ import useAnimatedTransition from './hooks/useAnimatedTransition';
 
 export interface AnimatedIconButtonProps {
 	source: AnimatedLottieViewProps[ 'source' ],
-	isActive: boolean,
-	onPress: () => void,
+	isActive?: boolean,
+	onPress?: () => void,
 	inactiveFrame: number,
 	activeFrame: number,
 	toActiveFrameRange: [ number, number ],
@@ -23,7 +23,7 @@ export interface AnimatedIconButtonProps {
 
 const AnimatedToggleButton = ( {
 	source,
-	isActive,
+	isActive = false,
 	onPress,
 	inactiveFrame,
 	activeFrame,
@@ -66,9 +66,7 @@ const AnimatedToggleButton = ( {
 					]}
 					source={source}
 					speed={speed}
-					autoSize={true}
 					loop={false}
-					autoPlay={false}
 					testID={`${testID}-animation`}
 				/>
 			</TouchableWithoutFeedback>
