@@ -41,6 +41,8 @@ module.exports = {
 	'rules': {
 		'no-shadow': 'off',
 		'@typescript-eslint/no-shadow': [ 'error' ],
+		'no-use-before-define': 'off',
+		'@typescript-eslint/no-use-before-define': [ 'error' ],
 		'import/extensions': [
 			'error',
 			'ignorePackages',
