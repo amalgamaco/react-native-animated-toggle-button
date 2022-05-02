@@ -1,10 +1,9 @@
-import React, { useRef } from 'react';
+import React from 'react';
 import {
-	StyleProp, ViewStyle, View, TouchableWithoutFeedback
+	StyleProp, ViewStyle, View, Pressable
 } from 'react-native';
-import LottieView, { AnimatedLottieViewProps } from 'lottie-react-native';
-
-import useAnimatedTransition from './hooks/useAnimatedTransition';
+import type { AnimatedLottieViewProps } from 'lottie-react-native';
+import { AnimatedIcon } from './AnimatedIcon';
 
 export interface AnimatedIconButtonProps {
 	source: AnimatedLottieViewProps[ 'source' ],
@@ -18,7 +17,7 @@ export interface AnimatedIconButtonProps {
 	speed?: number,
 	testID?: string,
 	containerStyle?: StyleProp<ViewStyle>,
-	style?: StyleProp<ViewStyle>
+	iconStyle?: StyleProp<ViewStyle>
 }
 
 const AnimatedToggleButton = ( {
@@ -31,47 +30,36 @@ const AnimatedToggleButton = ( {
 	toInactiveFrameRange,
 	speed = 1,
 	size = 50,
-	style,
+	iconStyle,
 	testID = 'AnimatedToggleButton',
 	containerStyle
-}: AnimatedIconButtonProps ) => {
-	const animationRef = useRef( null );
-
-	useAnimatedTransition( {
-		animationRef,
-		isActive,
-		inactiveFrame,
-		activeFrame,
-		toActiveFrameRange,
-		toInactiveFrameRange
-	} );
-
-	return (
-		<View
-			style={[
-				{ display: 'flex', justifyContent: 'center', alignItems: 'center' },
-				{ width: size, height: size },
-				containerStyle
-			]}
-			testID={`${testID}-container`}
+}: AnimatedIconButtonProps ) => (
+	<View
+		style={[
+			{ display: 'flex', justifyContent: 'center', alignItems: 'center' },
+			{ width: size, height: size },
+			containerStyle
+		]}
+		testID={`${testID}-container`}
+	>
+		<Pressable
+			onPress={onPress}
 		>
-			<TouchableWithoutFeedback
-				onPress={onPress}
-			>
-				<LottieView
-					ref={animationRef}
-					style={[
-						{ width: size, height: size },
-						style
-					]}
-					source={source}
-					speed={speed}
-					loop={false}
-					testID={`${testID}-animation`}
-				/>
-			</TouchableWithoutFeedback>
-		</View>
-	);
-};
+			<AnimatedIcon
+				source={source}
+				style={iconStyle}
+				loop={false}
+				inactiveFrame={inactiveFrame}
+				activeFrame={activeFrame}
+				toActiveFrameRange={toActiveFrameRange}
+				toInactiveFrameRange={toInactiveFrameRange}
+				speed={speed}
+				isActive={isActive}
+				size={size}
+				testID={testID}
+			/>
+		</Pressable>
+	</View>
+);
 
 export default AnimatedToggleButton;
