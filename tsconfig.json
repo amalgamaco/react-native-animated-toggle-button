@@ -2,7 +2,7 @@
   "compilerOptions": {
     "baseUrl": "./",
     "paths": {
-      "@amalgama/react-native-animated-toggle-button": ["./src/AnimatedToggleButton"]
+      "@amalgama/react-native-animated-toggle-button": ["./src/index"]
     },
     "allowUnreachableCode": false,
     "allowUnusedLabels": false,
