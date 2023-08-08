@@ -1,0 +1,21 @@
+name: 'Install yarn dependecies'
+description: 'Installs yarn dependecies for the project'
+runs:
+  using: "composite"
+  steps:
+    - uses: actions/setup-node@v3
+      with:
+        node-version: '18'
+    - run: npm install -g yarn
+      shell: bash
+    - name: Get node_modules cache
+      uses: actions/cache@v3
+      id: node_modules
+      with:
+        path: |
+          **/node_modules
+        key: ${{ runner.os }}-node_modules-${{ hashFiles('**/yarn.lock') }}
+    - run: npm config set -- "$AMALGAMA_REGISTRY_API:_authToken" "$AMALGAMA_REGISTRY_ACCESS_TOKEN"
+      shell: bash
+    - run: yarn install --frozen-lockfile
+      shell: bash
