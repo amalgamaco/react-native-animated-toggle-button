@@ -1,6 +1,6 @@
 {
   "name": "@amalgamaco/react-native-animated-toggle-button",
-  "version": "0.2.0",
+  "version": "0.2.1",
   "description": "A two states button that can be animated when transitioning between them.",
   "main": "lib/commonjs/index",
   "module": "lib/module/index",
