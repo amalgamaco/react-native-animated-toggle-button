@@ -1,5 +1,5 @@
 {
-  "name": "@amalgama/react-native-animated-toggle-button",
+  "name": "@amalgamaco/react-native-animated-toggle-button",
   "version": "0.2.0",
   "description": "A two states button that can be animated when transitioning between them.",
   "main": "lib/commonjs/index",
@@ -38,16 +38,17 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git@git.amalgama.co:amalgama/packages/npm/react-native-animated-toggle-button.git"
+    "url": "git@github.com:amalgamaco/react-native-animated-toggle-button.git"
   },
-  "author": "Mauro E. Bender <mauro@amalgama.co> (https://git.amalgama.co/mauro)",
+  "author": "Mauro E. Bender <mauro@amalgama.co> (https://github.com/maurobender)",
   "license": "MIT",
   "bugs": {
-    "url": "https://git.amalgama.co/amalgama/packages/npm/react-native-animated-toggle-button/issues"
+    "url": "https://github.com/amalgamaco/react-native-animated-toggle-button/issues"
   },
-  "homepage": "https://git.amalgama.co/amalgama/packages/npm/react-native-animated-toggle-button#readme",
+  "homepage": "https://github.com/amalgamaco/react-native-animated-toggle-button",
   "publishConfig": {
-    "@amalgama:registry": "https://git.amalgama.co/api/v4/projects/982/packages/npm/"
+    "registry": "https://registry.npmjs.org",
+    "access": "public"
   },
   "devDependencies": {
     "@commitlint/config-conventional": "^11.0.0",
@@ -128,9 +129,8 @@
     "hooks": {
       "after:bump": "npx auto-changelog -p"
     },
-    "gitlab": {
+    "github": {
       "release": true,
-      "publish": true,
       "releaseName": "Release AnimatedToggleButton v${version}"
     },
     "npm": {

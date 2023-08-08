@@ -28,13 +28,13 @@ The version to install depends on the react native version being used in the pro
 ### With yarn
 
 ```sh
-yarn add @amalgama/react-native-animated-toggle-button
+yarn add @amalgamaco/react-native-animated-toggle-button
 ```
 
 ### With npm
 
 ```sh
-npm install @amalgama/react-native-animated-toggle-button
+npm install @amalgamaco/react-native-animated-toggle-button
 ```
 ## Usage
 
@@ -42,7 +42,7 @@ The AnimatedToggleButton component can be used in a declarative way:
 
 ```js
 import React, { useState } from 'react';
-import { AnimatedToggleButton } from 'react-native-animated-toggle-button';
+import { AnimatedToggleButton } from '@amalgamaco/react-native-animated-toggle-button';
 
 import animation from './animation.json';
 
@@ -66,8 +66,8 @@ const BasicExample = () => {
 There is also a non-button animated component that you can use if you don't need a button and want to show only an animated view between two states:
 
 ```js
-import React, { useState } from 'react';
-import { AnimatedIcon } from 'react-native-animated-toggle-button';
+import React from 'react';
+import { AnimatedIcon } from '@amalgamaco/react-native-animated-toggle-button';
 
 import animation from './animation.json';
 
